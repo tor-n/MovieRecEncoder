@@ -1,3 +1,10 @@
+import torch
+from torch import nn
+import torch.nn.functional as F
+import torch.optim as optim
+import numpy as np
+import random
+
 class Recommender(nn.Module):
     def __init__(self, n_classes=1000, embedding_dim=127, projection_dim=256, user_info_len=30, movie_info_len=19, seq_len=len_train_sequence):
         super().__init__()
